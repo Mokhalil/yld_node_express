@@ -4,11 +4,10 @@ import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
-/*import { v1Router } from './api/v1';
-import { isProduction } from '../../../config';*/
+import {v1Router} from "./api/V1";
+
 
 const origin = {
-    // origin: isProduction ? 'https://dddforum.com' : '*',
     origin: "*"
 }
 
@@ -21,7 +20,7 @@ app.use(compression())
 app.use(helmet())
 app.use(morgan('combined'))
 
-//app.use('/api/v1', v1Router)
+app.use('/api/v1', v1Router)
 
 const port = process.env.PORT || 5000;
 
