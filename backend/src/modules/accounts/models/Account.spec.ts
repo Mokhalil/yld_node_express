@@ -1,10 +1,10 @@
 import {createMock} from "ts-auto-mock";
 import {Account, AccountProps} from "./Account";
 import faker from "@faker-js/faker";
+import {UniqueEntityID} from "@mokhal/node-ddd-toolkit-for-express";
 
 describe('Account',()=>{
     let mockAccountProps = createMock<AccountProps>({
-        id:faker.datatype.uuid(),
         firstName:faker.name.firstName(),
         lastname:faker.name.lastName(),
         email:faker.internet.email(),
@@ -13,7 +13,6 @@ describe('Account',()=>{
     })
     beforeEach(()=>{
         mockAccountProps = createMock<AccountProps>({
-            id:faker.datatype.uuid(),
             firstName:faker.name.firstName(),
             lastname:faker.name.lastName(),
             email:faker.internet.email(),

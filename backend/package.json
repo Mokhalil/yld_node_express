@@ -36,7 +36,7 @@
   "dependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
-    "@mokhal/node-ddd-toolkit-for-express": "^1.0.0",
+    "@mokhal/node-ddd-toolkit-for-express": "^1.0.3",
     "@okta/okta-sdk-nodejs": "^6.4.0",
     "babel-jest": "^27.5.1",
     "compression": "^1.7.4",

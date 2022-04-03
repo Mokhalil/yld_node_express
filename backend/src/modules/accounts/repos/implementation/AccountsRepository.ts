@@ -19,9 +19,11 @@ export class AccountsRepository implements IAccountsRepository {
 
     async getAccountById(id: UniqueEntityID): Promise<Account> {
         try {
+            const groups:any[] = [];
             const oktaAccount: oktaModels.OktaAccount = await this._service.getUser(id.toString()) as oktaModels.OktaAccount;
-            const groups = this._service.listUserGroups(id.toString())
-            await groups.each((item) => oktaAccount.groups.push(item.profile.name));
+            const groupsCollection = this._service.listUserGroups(id.toString())
+            await groupsCollection.each((item) => groups.push(item.profile.name));
+            oktaAccount.groups = groups;
             const account = oktaAccountMap.toDomain(oktaAccount)
             return account!
         } catch (error: OktaApiError | any) {
