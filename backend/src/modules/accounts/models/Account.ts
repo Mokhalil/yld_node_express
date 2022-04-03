@@ -7,7 +7,6 @@ import {AccountCreated} from "./events/AccountCreated";
 
 
 export interface AccountProps {
-    id: string,
     firstName: string,
     lastname: string,
     login: string,
