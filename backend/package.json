@@ -16,6 +16,7 @@
     "@types/jsdom": "^16.2.14",
     "@types/lodash": "^4.14.179",
     "@types/morgan": "^1.9.3",
+    "@types/shortid": "^0.0.29",
     "@types/uuid": "^8.3.4",
     "@types/validator": "^13.7.2",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
@@ -26,9 +27,11 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@mokhal/node-ddd-toolkit-for-express": "^1.0.0",
     "@okta/okta-sdk-nodejs": "^6.4.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
+    "debug": "^4.3.4",
     "dompurify": "^2.3.6",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
@@ -37,6 +40,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.2.4",
     "morgan": "^1.10.0",
+    "shortid": "^2.2.16",
     "ts-jest": "^27.1.3",
     "uuid": "^8.3.2",
     "validator": "^13.7.0"
